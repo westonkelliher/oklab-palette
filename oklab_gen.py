@@ -325,6 +325,8 @@ ensureLsInputs(); render();
 </script>
 </body></html>"""
 
-with open("/home/weston/responses/oklab-lc-const.html","w") as f:
+import os
+out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "index.html")
+with open(out, "w") as f:
     f.write(doc)
-print("wrote /home/weston/responses/oklab-lc-const.html")
+print(f"wrote {out}")
